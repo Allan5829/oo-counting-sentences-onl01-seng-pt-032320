@@ -29,13 +29,13 @@ class String
   def count_sentences
     array = []
     sentence_count = 0 
-    
-    if (self.end_with? ("."))
-      sentence_count += 1 
-    end 
     array << self.split(". ")
     array << self.split("? ")
     array << self.split("! ")
+    if (self.end_with? ("."))
+      sentence_count += 1 
+    end 
+    
     sentence_count = sentence_count + array.size
     
     if !(self.end_with? (".")) && !(self.end_with? ("?")) && !(self.end_with? ("!"))
