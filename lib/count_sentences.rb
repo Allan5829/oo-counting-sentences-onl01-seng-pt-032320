@@ -36,6 +36,7 @@ class String
     array << self.split("? ")
     array << self.split("! ")
     sentence_count = sentence_count + array.size
+    
     if !(self.end_with? (".")) && !(self.end_with? ("?")) && !(self.end_with? ("!"))
       return 0 
     end 
